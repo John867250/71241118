@@ -1,0 +1,27 @@
+def hitung_keuangan(gaji_per_jam, jam_per_minggu):
+    total_jam = jam_per_minggu * 5  # Total jam kerja selama 5 minggu
+    pendapatan_kotor = gaji_per_jam * total_jam
+    pendapatan_bersih = pendapatan_kotor * 0.86  # Setelah pajak 14%
+    
+    baju_aksesoris = pendapatan_bersih * 0.10
+    alat_tulis = pendapatan_bersih * 0.01
+    sisa_setelah_belanja = pendapatan_bersih - (baju_aksesoris + alat_tulis)
+    sedekah = sisa_setelah_belanja * 0.25
+    
+    anak_yatim = sedekah * 0.30
+    kaum_dhuafa = sedekah * 0.70
+    
+    return pendapatan_kotor, pendapatan_bersih, baju_aksesoris, alat_tulis, sedekah, anak_yatim, kaum_dhuafa
+
+gaji_per_jam = float(input("Masukkan gaji per jam: "))
+jam_per_minggu = float(input("Masukkan jumlah jam kerja per minggu: "))
+
+hasil = hitung_keuangan(gaji_per_jam, jam_per_minggu)
+
+print(f"Pendapatan sebelum pajak: Rp{hasil[0]:,.2f}")
+print(f"Pendapatan setelah pajak: Rp{hasil[1]:,.2f}")
+print(f"Pengeluaran untuk baju & aksesoris: Rp{hasil[2]:,.2f}")
+print(f"Pengeluaran untuk alat tulis: Rp{hasil[3]:,.2f}")
+print(f"Jumlah sedekah: Rp{hasil[4]:,.2f}")
+print(f"Jumlah untuk anak yatim: Rp{hasil[5]:,.2f}")
+print(f"Jumlah untuk kaum dhuafa: Rp{hasil[6]:,.2f}")
