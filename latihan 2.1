@@ -1,0 +1,16 @@
+def hitung_berat_badan(tinggi, bmi_diharapkan):
+    berat = bmi_diharapkan * (tinggi ** 2)
+    return berat
+
+tinggi = float(input("Masukkan tinggi badan (m): "))
+bmi_diharapkan = float(input("Masukkan nilai BMI yang diharapkan: "))
+print(f"Berat badan yang diperlukan: {hitung_berat_badan(tinggi, bmi_diharapkan):.2f} kg")
+
+# Latihan 2.2: Menghitung hasil fungsi f(x) = (2x^3 + 2x + 15) / x
+def fungsi_x(x):
+    if x == 0:
+        return "Tidak terdefinisi (pembagian dengan nol)"
+    return (2 * (x ** 3) + 2 * x + 15) / x
+
+x = int(input("Masukkan bilangan bulat x: "))
+print(f"Hasil dari f({x}) adalah {fungsi_x(x)}")
