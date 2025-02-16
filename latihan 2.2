@@ -1,0 +1,7 @@
+def fungsi_x(x):
+    if x == 0:
+        return "tak terdefinisikan (pembagian dengan nol)"
+    return (2 * (x ** 3) + 2 * x + 15) / x
+
+x = int(input("Masukkan bilangan bulat x: "))
+print(f"Hasil dari f({x}) adalah {fungsi_x(x)}")
