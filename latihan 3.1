@@ -1,0 +1,19 @@
+Algoritma Cek_Bilangan_Prima
+Deklarasi:
+    integer n, i
+    boolean prima
+
+Deskripsi:
+    INPUT n
+    IF n <= 1 THEN
+        OUTPUT "Bukan bilangan prima"
+    ELSE
+        prima <- True
+        FOR i FROM 2 TO n-1 DO
+            IF n MOD i = 0 THEN
+                prima <- False
+                BREAK
+        IF prima = True THEN
+            OUTPUT "Bilangan prima"
+        ELSE
+            OUTPUT "Bukan bilangan prima"
