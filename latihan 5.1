@@ -1,0 +1,11 @@
+def cek_angka(a, b, c):
+    if a != b and b != c and a != c:
+        if a + b == c or a + c == b or b + c == a:
+            return True
+    return False
+
+print(cek_angka(5, 3, 8))  # True (5 + 3 = 8)
+print(cek_angka(4, 4, 8))  # False (ada angka yang sama)
+print(cek_angka(10, 2, 12)) # True (10 + 2 = 12)
+print(cek_angka(6, 3, 9))  # True (6 + 3 = 9)
+print(cek_angka(1, 2, 3))  # True (1 + 2 = 3)
