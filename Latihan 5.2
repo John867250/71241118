@@ -1,0 +1,12 @@
+def cek_digit_belakang(a, b, c):
+    a_digit = a % 10
+    b_digit = b % 10
+    c_digit = c % 10
+
+    return (a_digit == b_digit) or (a_digit == c_digit) or (b_digit == c_digit)
+
+print(cek_digit_belakang(30, 20, 18))  # True (30 dan 20: digit terakhir = 0)
+print(cek_digit_belakang(145, 5, 100)) # True (145 dan 5: digit terakhir = 5)
+print(cek_digit_belakang(71, 187, 18)) # False (semua berbeda)
+print(cek_digit_belakang(1024, 14, 94)) # True (14 dan 94: digit terakhir = 4)
+print(cek_digit_belakang(53, 8900, 658)) # False (semua berbeda)
